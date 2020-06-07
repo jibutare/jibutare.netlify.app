@@ -1,0 +1,13 @@
+<head>
+  {{ partial "head/meta" . }}
+  <title>{{ partial "data/title" . }}</title>
+  <link rel="canonical" href="{{ .Permalink }}" />
+  {{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  {{ end }} {{ partial "head/hreflang" . }} {{ partial "head/includes" . }} {{ partial "head/extra" . }}
+  <script
+    data-ad-client="ca-pub-6358005185774681"
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ></script>
+</head>

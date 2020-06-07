@@ -1,3 +1,118 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://jibutare.org/"
+languageCode = "ja"
+title = "jibutare"
+# for smart copyright line, leave this blank and check [params.copyright]
+copyright = ""
+
+theme = "minimo"
+
+disqusShortname = "jibutare"
+googleAnalytics = "UA-65590-6"
+
+Paginate = 5
+preserveTaxonomyNames = true
+
+enableRobotsTXT = true # generate robots.txt
+
+# Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
+pygmentsCodefences = true
+
+enableEmoji = true
+
+# Missing translations will default to this content language
+defaultContentLanguage = "ja"
+
+[params.info]
+description = "The past cannot be cured."
+title404 = "Nothing's here!"
+
+[params.assets]
+favicon = "favicon.png"
+customCSS = ["css/custom.css"]
+customJS = ["js/custom.js"]
+gopher = "" # used in 404 template ( Generator: https://gopherize.me )
+
+[params.copyright]
+prefix = ""
+holder = "jibutare"
+startYear = "2017"
+suffix = ""
+
+[params.settings]
+# date & time format: https://golang.org/pkg/time/
+dateFormat = "2006-01-02"
+listDateFormat = "2006-01-02"
+archiveDateFormat = "Jan 02"
+hideEntryNavigation = ["page"] # boolean / array of sections
+hideEntryMeta = ["page"] # boolean / array of sections
+showReadingTime = false
+showLastmod = true
+taxonomyCloudShuffle = true
+accentColor = "#c51162"
+hideMainMenu = false
+rtl = false
+
+[params.sidebar]
+enable = false
+
+[params.widgets]
+header = ["breadcrumbs"]
+homepage = ["recent_posts"]
+sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
+footer = ["social_menu"]
+
+[params.opengraph.facebook]
+admins = [] # array of Facebook IDs
+appID = "120544911367320"
+pageID = "1293131047389945"
+
+[params.opengraph.twitter]
+page = "jibutare" # Twitter page username
+
+[params.seo]
+# Title Separator: - – — · • * ⋆ | ~ « » < >
+titleSeparator = "•"
+
+[params.social]
+codepen = ""
+email = "jibutare@gmail.com"
+facebook = "jibutare"
+github = "jibutare"
+instagram = "jibutare"
+linkedin = ""
+twitter = "jibutare"
+
+[params.comments]
+enable = false
+
+[params.search]
+client = "fuse" # algolia / fuse / lunr
+
+#[params.social.config]
+#platforms = ["github","facebook","twitter","instagram","email","codepen","linkedin"]
+
+[taxonomies]
+author = "authors"
+category = "categories"
+tag = "tags"
+
+[permalinks]
+page = "/:slug/"
+docs = "/:slug/"
+diary = "/:year/:month/:slug/"
+
+[[menu.main]]
+name = "Photo"
+weight = -10
+identifier = "photograph"
+url = "https://hechikan.com/"
+
+#[blackfriday]
+#hrefTargetBlank = true
+
+#[languages]
+# edit this block for your own language
+#[languages.en]
+#lang = "en"
+#languageName = "English"
+#weight = 1
